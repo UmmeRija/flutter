@@ -10,10 +10,13 @@ class Home extends StatelessWidget {
         color: Colors.pink.shade100,
         height: 200,
         width: 200,
-        child: Text("Rija Babar"),
-        alignment: Alignment.topLeft,
-        padding: EdgeInsets.all(80),
+        child: Text("Rija Babar" , style:TextStyle(
+          color: Colors.pink ,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          backgroundColor: Colors.white70,
 
+        )),
 
       ),
     );
