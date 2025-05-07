@@ -5,9 +5,16 @@ class FirstScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("First Screen" , style: TextStyle(fontWeight: FontWeight.bold , color: Colors.pink.shade600, fontSize: 40),)
+    return Scaffold(
+      body:Stack(
+        children: [
+          Container(
+            height: DOUB,
+          )
+        ],
+      ),
     );
+
 
   }
 }

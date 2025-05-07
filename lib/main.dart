@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/bottom_bar.dart';
+import 'package:my_app/image_work.dart';
 import 'package:my_app/stack.dart';
 
 import 'app_bar.dart';
@@ -15,10 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 debugShowCheckedModeBanner: false,
       // home: TabScreen(),
-      home: MyBottomBar(),
+      // home: MyBottomBar(),
+      // home: ImageWork(),
+      // home: ListView(),
+      home: ,
     );
   }
-
-
-
 }
