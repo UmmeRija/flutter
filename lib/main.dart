@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/bottom_bar.dart';
 import 'package:my_app/image_work.dart';
+import 'package:my_app/my_button.dart';
 import 'package:my_app/newOne.dart';
 import 'package:my_app/stack.dart';
 
@@ -22,6 +23,7 @@ debugShowCheckedModeBanner: false,
       // home: ListView(),
       // home: WhatsappScreen(),
       home: Newone(),
+      // home: MyButton(),
     );
   }
 }

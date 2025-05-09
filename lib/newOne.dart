@@ -13,45 +13,71 @@ class _NewoneState extends State<Newone> {
 
     @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey.shade100,
-      appBar: AppBar(
-        elevation: 0,
+    return DefaultTabController(
+      length: 10,
+      child: Scaffold(
         backgroundColor: Colors.grey.shade100,
-        leadingWidth: 150,
-        leading: Center(
-          child: Text(
-            "WhatsApp",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.green,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.grey.shade100,
+          leadingWidth: 150,
+          leading: Center(
+            child: Text(
+              "WhatsApp",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.green,
+              ),
             ),
           ),
+          actions: [
+            Icon(Icons.camera_alt_outlined),
+            SizedBox(width: 10),
+            Icon(Icons.more_vert),
+          ],
+          bottom: TabBar(tabs:
+
+          [
+
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.grey.shade400,
+
+
+              ),
+
+                onPressed: (){}, child: Text("All" , style: TextStyle(color:Colors.grey.shade900 ),)),
+            ElevatedButton(onPressed: (){}, child: Text("Unread" , style: TextStyle(color:Colors.grey.shade900 ),)),
+            ElevatedButton(onPressed: (){}, child: Text("Favorites" , style: TextStyle(color:Colors.grey.shade900))),
+            ElevatedButton(onPressed: (){}, child: Text("Groups" , style: TextStyle(color:Colors.grey.shade900))),
+            IconButton(onPressed: (){}, icon:Icon(Icons.add , color:Colors.grey.shade900)),
+          ],
+              dividerColor: Colors.transparent,
+
+          ),
+
         ),
-        actions: [
-          Icon(Icons.camera_alt_outlined),
-          SizedBox(width: 10),
-          Icon(Icons.more_vert),
-        ],
-      ),
-      body: screens[currentIndex],
-      floatingActionButton: FloatingActionButton(onPressed: (){},backgroundColor: Colors.green,child: Center(child: Icon(Icons.message,color: Colors.white,)),),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (value){
-          setState(() {
-            currentIndex= value;
-          });
-        },
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.grey,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.message),label: "Chats"),
-          BottomNavigationBarItem(icon: Icon(Icons.update_outlined),label: "Updates"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_3),label: "Communities"),
-          BottomNavigationBarItem(icon: Icon(Icons.phone),label: "Calls"),
-        ],
+
+
+        body: screens[currentIndex],
+        floatingActionButton: FloatingActionButton(onPressed: (){},backgroundColor: Colors.green,child: Center(child: Icon(Icons.message,color: Colors.white,)),),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: currentIndex,
+          onTap: (value){
+            setState(() {
+              currentIndex= value;
+            });
+          },
+          selectedItemColor: Colors.green,
+          unselectedItemColor: Colors.grey,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.message),label: "Chats"),
+            BottomNavigationBarItem(icon: Icon(Icons.update_outlined),label: "Updates"),
+            BottomNavigationBarItem(icon: Icon(Icons.person_3),label: "Communities"),
+            BottomNavigationBarItem(icon: Icon(Icons.phone),label: "Calls"),
+          ],
+        ),
       ),
     );
   }
