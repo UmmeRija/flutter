@@ -9,7 +9,7 @@ class FirstScreen extends StatelessWidget {
       body:Stack(
         children: [
           Container(
-            height: 200,
+
           )
         ],
       ),
