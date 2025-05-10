@@ -4,6 +4,7 @@ import 'package:my_app/image_work.dart';
 import 'package:my_app/my_button.dart';
 import 'package:my_app/newOne.dart';
 import 'package:my_app/stack.dart';
+import 'package:my_app/user_inputs.dart';
 
 import 'app_bar.dart';
 import 'whatsapp_screen.dart';
@@ -22,8 +23,9 @@ debugShowCheckedModeBanner: false,
       // home: ImageWork(),
       // home: ListView(),
       // home: WhatsappScreen(),
-      home: Newone(),
+      // home: Newone(),
       // home: MyButton(),
+      home: UserInputs(),
     );
   }
 }
