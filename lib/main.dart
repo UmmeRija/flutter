@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/bottom_bar.dart';
 import 'package:my_app/image_work.dart';
+import 'package:my_app/insta_screen.dart';
+import 'package:my_app/my_button.dart';
 import 'package:my_app/stack.dart';
 
 import 'app_bar.dart';
@@ -19,7 +21,8 @@ debugShowCheckedModeBanner: false,
       // home: MyBottomBar(),
       // home: ImageWork(),
       // home: ListView(),
-      home: ,
+      home: MyButton(),
+      // home:InstaScreen() ,
     );
   }
 }

@@ -67,8 +67,8 @@ class CardDynamic extends StatelessWidget {
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
       ),
-        itemBuilder: animals.length,
-        gridDel
+        itemBuilder:(contex , index){},
+
       ),
     );
   }

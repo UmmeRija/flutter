@@ -15,12 +15,12 @@ class MyButton extends StatelessWidget {
           children: [
             ElevatedButton(
               // style: ButtonStyle(backgroundColor: Colors.pink.shade100,),
-
-
                 onPressed: (){
               return debugPrint("object");
             },
-                child:Text("Rija" , style: TextStyle(color: Colors.pink),)),
+                child:Center(child: Text("Rija" , style: TextStyle(color: Colors.pink),))),
+            TextButton(onPressed: (){}, child:TextStyle("RIja"), ),
+
           ],
         ),
       ),
