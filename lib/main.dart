@@ -7,6 +7,8 @@ import 'package:my_app/stack.dart';
 import 'app_bar.dart';
 import 'whatsapp_screen.dart';
 import 'formstry.dart';
+import 'text_field.dart';
+import 'date_and_time.dart';
 void main(){
   runApp(MyApp());
 }
@@ -24,7 +26,8 @@ debugShowCheckedModeBanner: false,
       // home: WhatsappScreen(),
       // home: Newone(),
       // home: MyButton(),
-      home: Formstry(),
+      // home: Formstry(),
+        home: DateAndTime(),
     );
   }
 }
