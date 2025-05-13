@@ -9,6 +9,8 @@ import 'whatsapp_screen.dart';
 import 'formstry.dart';
 import 'text_field.dart';
 import 'date_and_time.dart';
+import 'navigator.dart';
+import 'sirka_code.dart';
 void main(){
   runApp(MyApp());
 }
@@ -27,7 +29,8 @@ debugShowCheckedModeBanner: false,
       // home: Newone(),
       // home: MyButton(),
       // home: Formstry(),
-        home: DateAndTime(),
+      //   home: MyNavigator(),
+      home: MyForm(),
     );
   }
 }
