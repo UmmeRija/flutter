@@ -5,7 +5,6 @@ class DateAndTime extends StatefulWidget {
   @override
   State<DateAndTime> createState() => _DateAndTimeState();
   // String? date;
-
 }
 date(){
 
