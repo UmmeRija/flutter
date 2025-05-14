@@ -88,7 +88,6 @@ class _MyFormState extends State<MyForm> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: TextField(
-                    controller: Contr,
                     decoration: InputDecoration(
                       hintText: "Age",
                       hintStyle: TextStyle(color: Colors.black),
