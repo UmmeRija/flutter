@@ -26,8 +26,8 @@ debugShowCheckedModeBanner: false,
       // home: WhatsappScreen(),
       // home: Newone(),
       // home: MyButton(),
-      home: Formstry(),
-      //   home: DateAndTime(),
+      // home: Formstry(),
+        home: DateAndTime(),
     );
   }
 }
