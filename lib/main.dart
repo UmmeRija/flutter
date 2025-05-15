@@ -3,7 +3,6 @@ import 'package:my_app/bottom_bar.dart';
 import 'package:my_app/image_work.dart';
 import 'package:my_app/my_button.dart';
 import 'package:my_app/newOne.dart';
-import 'package:my_app/sreen_one.dart';
 import 'package:my_app/stack.dart';
 import 'app_bar.dart';
 import 'whatsapp_screen.dart';
@@ -31,9 +30,7 @@ debugShowCheckedModeBanner: false,
       // home: MyButton(),
       // home: Formstry(),
       //   home: MyNavigator(),
-      // home: MyForm(),
-      // home: MyButton(),
-      home:ScreeenOne(),
+      home: MyForm(),
     );
   }
 }
