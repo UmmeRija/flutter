@@ -10,10 +10,16 @@ class FirstPractice extends StatefulWidget {
 
 class _FirstPracticeState extends State<FirstPractice> {
   String? date;
+  String? gender = "Male";
   getdate() async{
     DateTime? pickeddate = await showDatePicker(context: context, firstDate: DateTime(1995), lastDate: DateTime.now());
+    if(pickeddate != null){
+      String temp = "${pickeddate.day}/${pickeddate.month}/${pickeddate.year}";
+      setState(() {
+        date = temp;
+      });
+
   }
-  if (pickeddate != null){
 
   }
   @override
@@ -47,8 +53,13 @@ class _FirstPracticeState extends State<FirstPractice> {
                   child: TextField(
 
                     decoration: InputDecoration(
-                      hintText: "First Name",
-                        hintStyle:TextStyle(fontWeight: FontWeight.bold , fontSize: 15),
+                      focusColor: Colors.black,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      label:Text( "First Name" ),
+                        labelStyle:TextStyle(color: Colors.grey.shade800, fontWeight: FontWeight.bold , fontSize: 15),
+
                     ),
                   ),
                 ),
@@ -57,24 +68,77 @@ class _FirstPracticeState extends State<FirstPractice> {
                   child: TextField(
 
                     decoration: InputDecoration(
-                      hintText: "Last Name",
-                      hintStyle:TextStyle(fontWeight: FontWeight.bold , fontSize: 15),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      label: Text("Last Name"),
+                      labelStyle:TextStyle(fontWeight: FontWeight.bold , fontSize: 15),
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      label: Text("Email"),
+                      labelStyle:TextStyle(fontWeight: FontWeight.bold , fontSize: 15),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    children:[
+                      Row(
+                      children: [
+                        Radio(value: "Male", groupValue: gender, onChanged: (value){
+                          setState(() {
+                            gender = value!;
+                          });
+                        }),
+                        Text("Male"),
+                ),
+                      Row(
+                        children: [
+                        Radio(value: "Female", groupValue: gender, onChanged: (value){
+                          setState(() {
+                            gender = value!;
+                          });
+                        }),
+                        Text("Female"),
+            ]
+                      ),
+                      Row(
+                      children: [
+                        Radio(value: "Other", groupValue: gender, onChanged: (value){
+                          setState(() {
+                            gender = value!;
+                          });
+                        }),
+                        Text("Other"),
+                      ],
+                    ),
+                  ),
+
+
+
                 Padding(
                   padding: const EdgeInsets.all(8.0),
 
                   child: TextField(
                     enabled: false,
                     decoration: InputDecoration(
-                      hintText: date == null ? "14/05/2025" : date().toString(),
-                      suffixIcon: Icon(Icons.calendar_month, color: Colors.grey.shade800,),
+                      hintText: date == null ? "14/05/2025" : date.toString(),
+                      suffixIcon: IconButton(onPressed: (){
+                        getdate();
+                      }, icon: Icon(Icons.calendar_month), color: Colors.grey.shade800,),
+
                       hintStyle:TextStyle(color: Colors.grey.shade800, fontWeight: FontWeight.bold , fontSize: 15),
-                      border: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.black,
-                        )
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)
                       )
 
                     ),
