@@ -5,8 +5,26 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Second Screen" , style: TextStyle(fontWeight: FontWeight.bold, color: Colors.pink.shade600, fontSize: 40),),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Screen"),
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            ElevatedButton(onPressed: (){
+              Navigator.push(context,MaterialPageRoute(builder: (context){
+                return SecondScreen();
+              }));
+            },
+          child: Text("Move to Second Screen" , style: TextStyle(fontWeight: FontWeight.bold , color: Colors.black),) ),
+      ElevatedButton(onPressed: (){
+        Navigator.pop(context);
+        }, child: Text("move back")),
+          ],
+        ),
+
+    )
     );
   }
 }
