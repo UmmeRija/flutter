@@ -39,7 +39,7 @@ class _FirstPracticeState extends State<FirstPractice> {
         children: [
           Container(
             margin: EdgeInsets.all(20),
-            height: 500,
+            height: 550,
             width: double.infinity,
 
             decoration: BoxDecoration(
@@ -102,76 +102,103 @@ class _FirstPracticeState extends State<FirstPractice> {
                     ),
                   ),
                 ),
-                Container(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Radio(
-                            value: "Male",
-                            groupValue: gender,
-                            onChanged: (value) {
-                              setState(() {
-                                gender = value!;
-                              });
-                            },
-                          ),
-                          Text("Male"),
-                        ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
                       ),
-                      Row(
-                        children: [
-                          Radio(
-                            value: "Female",
-                            groupValue: gender,
-                            onChanged: (value) {
-                              setState(() {
-                                gender = value!;
-                              });
-                            },
-                          ),
-                          Text("Female"),
-                        ],
+                      label: Text("Pasword"),
+                      labelStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
                       ),
-                      Row(
-                        children: [
-                          Radio(
-                            value: "Other",
-                            groupValue: gender,
-                            onChanged: (value) {
-                              setState(() {
-                                gender = value!;
-                              });
-                            },
-                          ),
-                          Text("Other"),
-                        ],
-                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text("Gender" , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),)
+                          ],
+                        ),
+                        Row(
+                          children: [
 
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-
-                        child: Stack(
-
-                          children:[ TextField(
-                            // enabled: false,
-                            decoration: InputDecoration(
-                              hintText:
-                                  date == null ? "14/05/2025" : date.toString(),
-
-                              hintStyle: TextStyle(
-                                color: Colors.grey.shade800,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15,
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
+                            Radio(
+                              value: "Male",
+                              groupValue: gender,
+                              onChanged: (value) {
+                                setState(() {
+                                  gender = value!;
+                                });
+                              },
                             ),
+                            Text("Male"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Radio(
+                              value: "Female",
+                              groupValue: gender,
+                              onChanged: (value) {
+                                setState(() {
+                                  gender = value!;
+                                });
+                              },
+                            ),
+                            Text("Female"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Radio(
+                              value: "Other",
+                              groupValue: gender,
+                              onChanged: (value) {
+                                setState(() {
+                                  gender = value!;
+                                });
+                              },
+                            ),
+                            Text("Other"),
+                          ],
+                        ),
+                      ],
+
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+
+                  child: Stack(
+
+                      children:[ TextField(
+                        // enabled: false,
+                        decoration: InputDecoration(
+                          hintText:
+                          date == null ? "14/05/2025" : date.toString(),
+
+                          hintStyle: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
                           ),
-                          Positioned(
-                            right: 0,
-                            child: IconButton(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                      ),
+                        Positioned(
+                          right: 0,
+                          child: IconButton(
                             onPressed: () {
                               print("object");
                               getdate();
@@ -179,17 +206,17 @@ class _FirstPracticeState extends State<FirstPractice> {
                             icon: Icon(Icons.calendar_month),
                             color: Colors.grey.shade800,
                           ),),
-                          ]
-                        ),
-                      ),
-                    ],
+                      ]
                   ),
                 ),
+
+                Center(child: ElevatedButton(onPressed: (){}, child:Text("Submmit")))
               ],
             ),
           ),
         ],
       ),
+      
     );
   }
 }

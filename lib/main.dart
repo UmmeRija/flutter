@@ -4,6 +4,7 @@ import 'package:my_app/image_work.dart';
 import 'package:my_app/my_button.dart';
 import 'package:my_app/newOne.dart';
 import 'package:my_app/stack.dart';
+import 'package:provider/provider.dart';
 import 'app_bar.dart';
 import 'first_practice.dart';
 import 'whatsapp_screen.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(create: create)
+      MaterialApp(
 debugShowCheckedModeBanner: false,
       // home: TabScreen(),
       // home: MyBottomBar(),
@@ -34,7 +36,12 @@ debugShowCheckedModeBanner: false,
       //   home: MyNavigator(),
       // home: MyForm(),
       // home: FirstScreen(),
-      home: FirstPractice(),
+      // home: FirstPractice(),
+    )
     );
   }
 }
+
+
+
+
