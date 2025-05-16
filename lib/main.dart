@@ -3,7 +3,10 @@ import 'package:my_app/bottom_bar.dart';
 import 'package:my_app/image_work.dart';
 import 'package:my_app/my_button.dart';
 import 'package:my_app/newOne.dart';
+import 'package:my_app/new_packages/counter_provider.dart';
 import 'package:my_app/stack.dart';
+import 'package:my_app/to_do_list/to_do_controller.dart';
+import 'package:my_app/to_do_list/to_do_screen.dart';
 import 'package:provider/provider.dart';
 import 'app_bar.dart';
 import 'first_practice.dart';
@@ -22,22 +25,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create: create)
-      MaterialApp(
-debugShowCheckedModeBanner: false,
-      // home: TabScreen(),
-      // home: MyBottomBar(),
-      // home: ImageWork(),
-      // home: ListView(),
-      // home: WhatsappScreen(),
-      // home: Newone(),
-      // home: MyButton(),
-      // home: Formstry(),
-      //   home: MyNavigator(),
-      // home: MyForm(),
-      // home: FirstScreen(),
-      // home: FirstPractice(),
-    )
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=>CounterProvider()),
+        ChangeNotifierProvider(create: (_)=>ToDoController()),
+      ],
+      child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+        // home: TabScreen(),
+        // home: MyBottomBar(),
+        // home: ImageWork(),
+        // home: ListView(),
+        // home: WhatsappScreen(),
+        // home: Newone(),
+        // home: MyButton(),
+        // home: Formstry(),
+        //   home: MyNavigator(),
+        // home: MyForm(),
+        // home: FirstScreen(),
+        // home: FirstPractice(),
+        home: ToDoScreen(),
+      ),
     );
   }
 }
