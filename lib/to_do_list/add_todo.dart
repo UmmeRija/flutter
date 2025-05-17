@@ -41,8 +41,6 @@ class AddTodo extends StatelessWidget {
                   ),
                 ),
               ),
-
-
             ],
 
           ),
