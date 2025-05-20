@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_app/bottom_bar.dart';
 import 'package:my_app/image_work.dart';
 import 'package:my_app/my_button.dart';
-import 'package:my_app/newOne.dart';
+import 'package:my_app/whatsapp/calls_screen.dart';
+import 'package:my_app/whatsapp/newOne.dart';
 import 'package:my_app/new_packages/counter_provider.dart';
 import 'package:my_app/stack.dart';
 import 'package:my_app/to_do_list/to_do_controller.dart';
@@ -10,7 +11,6 @@ import 'package:my_app/to_do_list/to_do_screen.dart';
 import 'package:provider/provider.dart';
 import 'app_bar.dart';
 import 'first_practice.dart';
-import 'whatsapp_screen.dart';
 import 'formstry.dart';
 import 'text_field.dart';
 import 'date_and_time.dart';
@@ -37,14 +37,15 @@ class MyApp extends StatelessWidget {
         // home: ImageWork(),
         // home: ListView(),
         // home: WhatsappScreen(),
-        // home: Newone(),
+        home: Newone(),
         // home: MyButton(),
         // home: Formstry(),
         //   home: MyNavigator(),
         // home: MyForm(),
         // home: FirstScreen(),
         // home: FirstPractice(),
-        home: ToDoScreen(),
+        // home: ToDoScreen(),
+        // home: CallsScreen(),
       ),
     );
   }
