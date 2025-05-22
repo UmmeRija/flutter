@@ -39,7 +39,9 @@ class RegisterScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: TextFormField(decoration: InputDecoration(
+                child: TextFormField(
+                  style: TextStyle(color: AppColors.textColor),
+                  decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(),
