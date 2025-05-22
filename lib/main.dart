@@ -4,6 +4,7 @@ import 'package:my_app/image_work.dart';
 import 'package:my_app/my_button.dart';
 // import 'package:my_app/newOne.dart';
 import 'package:my_app/new_packages/counter_provider.dart';
+import 'package:my_app/practice_app/app_colors.dart';
 import 'package:my_app/practice_app/login_screen.dart';
 import 'package:my_app/practice_app/register_screen.dart';
 import 'package:my_app/stack.dart';
@@ -34,6 +35,8 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
       debugShowCheckedModeBanner: false,
+        theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: AppColors.textColor),),
+
         // home: TabScreen(),
         // home: MyBottomBar(),
         // home: ImageWork(),

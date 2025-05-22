@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
@@ -12,23 +13,28 @@ class RegisterScreen extends StatelessWidget {
       body: SizedBox(
         height: double.infinity,
         width: double.infinity,
-        child: Center(
+        child: Form(
+          key: key,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 20,
             children: [
-              Text("Login Form" , style: TextStyle(color: Colors.grey , fontSize: 30),
+              Text("Register Form" , style: TextStyle(color: AppColors.textColor , fontSize: 30),
 
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: TextFormField(decoration: InputDecoration(
+                child: TextFormField(
+
+                  decoration: InputDecoration(
+
+
                     border: OutlineInputBorder(),
                     enabledBorder: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(),
                     hintText: "Name" , hintStyle: TextStyle(color: AppColors.textColor,
-                    fontSize: 30),
-                    suffixIcon: Icon(Icons.person)
+                    fontSize: 20),
+                    prefixIcon: Icon(Icons.person , color: AppColors.textColor, )
                 ),),
               ),
               Padding(
@@ -38,8 +44,8 @@ class RegisterScreen extends StatelessWidget {
                     enabledBorder: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(),
                     hintText: "Email" , hintStyle: TextStyle(color: AppColors.textColor,
-                    fontSize: 30),
-                    suffixIcon: Icon(Icons.email)
+                    fontSize: 20),
+                    prefixIcon: Icon(Icons.email , color: AppColors.textColor)
                 ),),
               ),
               Padding(
@@ -49,8 +55,8 @@ class RegisterScreen extends StatelessWidget {
                     enabledBorder: OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(),
                     hintText: "Pasword" , hintStyle: TextStyle(color: AppColors.textColor,
-                    fontSize: 30),
-                    suffixIcon: Icon(Icons.remove_red_eye)
+                    fontSize: 20),
+                    prefixIcon: Icon(Icons.lock, color: AppColors.textColor)
                 ),),
               ),
               ElevatedButton(
@@ -58,8 +64,16 @@ class RegisterScreen extends StatelessWidget {
                   backgroundColor: AppColors.primary,
                 ) ,
                 onPressed: (){},
-                child:Center(child: Text("Login" , style: TextStyle(color: AppColors.textColor,))),
-              )
+                child:Center(child: Text("Register" , style: TextStyle(color: AppColors.textColor,))),
+
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Alredy Have An Account?"),
+                  CupertinoButton(child: Text("Login") , onPressed: (){})
+                ],
+              ),
             ],
 
           ),

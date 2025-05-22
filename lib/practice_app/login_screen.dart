@@ -17,7 +17,7 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 20,
             children: [
-              Text("Login Form" , style: TextStyle(color: Colors.grey , fontSize: 30),
+              Text("Login Form" , style: TextStyle(color: AppColors.textColor , fontSize: 20),
 
               ),
               Padding(
@@ -27,8 +27,8 @@ class LoginScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(),
                   focusedBorder: OutlineInputBorder(),
                   hintText: "Email" , hintStyle: TextStyle(color: AppColors.textColor,
-                fontSize: 30),
-                  suffixIcon: Icon(Icons.email)
+                fontSize: 20),
+                  prefixIcon: Icon(Icons.email , color: AppColors.textColor,)
                 ),),
               ),
               Padding(
@@ -38,8 +38,8 @@ class LoginScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(),
                   focusedBorder: OutlineInputBorder(),
                   hintText: "Pasword" , hintStyle: TextStyle(color: AppColors.textColor,
-                    fontSize: 30),
-                  suffixIcon: Icon(Icons.remove_red_eye)
+                    fontSize: 20),
+                  prefixIcon: Icon(Icons.lock , color: AppColors.textColor)
                 ),),
               ),
               ElevatedButton(
