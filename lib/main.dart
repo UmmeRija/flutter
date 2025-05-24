@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/bottom_bar.dart';
 import 'package:my_app/image_work.dart';
@@ -12,6 +13,7 @@ import 'package:my_app/to_do_list/to_do_controller.dart';
 import 'package:my_app/to_do_list/to_do_screen.dart';
 import 'package:provider/provider.dart';
 import 'app_bar.dart';
+import 'firebase_options.dart';
 import 'first_practice.dart';
 // import 'whatsapp_screen.dart';
 import 'formstry.dart';
@@ -20,7 +22,11 @@ import 'date_and_time.dart';
 import 'navigator.dart';
 import 'sirka_code.dart';
 import 'screen/first_screen.dart';
-void main(){
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
