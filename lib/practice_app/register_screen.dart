@@ -102,7 +102,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   }
                 },
                 child:Center(child: Text("Register" , style: TextStyle(color: AppColors.textColor,))),
-
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -116,7 +115,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ],
               ),
             ],
-
           ),
         ),
       ),
