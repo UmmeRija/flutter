@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/practice_app/login_screen.dart';
+import 'package:my_app/practice_app/service.dart';
 
 import 'app_colors.dart';
 
@@ -14,7 +15,7 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController usernameControler = TextEditingController();
   final TextEditingController emailControler = TextEditingController();
-  final TextEditingController paswordControler = TextEditingController();
+  final TextEditingController passwordControler = TextEditingController();
   final GlobalKey<FormState> _key = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -74,7 +75,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  controller: paswordControler,
+                  controller: passwordControler,
                   validator: (value){
                     if(value!.isEmpty){
                       return "Pasword field is empty";
@@ -94,8 +95,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primary,
                 ) ,
-                onPressed: (){
-                  if(_key.currentState!.validate()){}
+                onPressed: ()async{
+                  if(_key.currentState!.validate()){
+                   String result = await signup(usernameControler.text, emailControler.text, passwordControler.text);
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("result")));
+                  }
                 },
                 child:Center(child: Text("Register" , style: TextStyle(color: AppColors.textColor,))),
 
