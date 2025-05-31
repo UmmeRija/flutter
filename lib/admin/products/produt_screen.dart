@@ -9,8 +9,18 @@ class ProdutScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
+
         title: Text("Welcome Admin!" , style: TextStyle(color: AppColors.textColor),),
+        centerTitle: true,
       ),
+      body: Container(),
+      floatingActionButton: FloatingActionButton(shape: CircleBorder(),
+
+          backgroundColor: AppColors.secondry,
+          foregroundColor: AppColors.textColor,
+          onPressed: (){
+
+          }),
     );
   }
 }

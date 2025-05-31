@@ -1,6 +1,8 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:my_app/admin/products/add_products.dart';
+import 'package:my_app/admin/products/produt_screen.dart';
 import 'package:my_app/practice_app/app_colors.dart';
 import 'package:my_app/practice_app/register_screen.dart';
 import 'package:my_app/to_do_list/to_do_controller.dart';
@@ -44,7 +46,9 @@ class MyApp extends StatelessWidget {
         // home: FirstPractice(),
         // home: ToDoScreen(),
         // home: LoginScreen(),
-        home: RegisterScreen(),
+        // home: RegisterScreen(),
+        // home: ProdutScreen(),
+        home: AddProducts(),
       ),
     );
   }
